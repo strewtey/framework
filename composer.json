@@ -11,12 +11,13 @@
     },
     "authors": [
         {
-            "name": "gedeontimothy",
+            "name": "Gedeon Timothy",
+            "github": "gedeontimothy",
             "email": "gedeonbateko3@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.3"
-    },
+    }
 }
