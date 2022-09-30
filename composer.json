@@ -1,0 +1,22 @@
+{
+    "name": "strewty/framework",
+    "description": "The Strew Framework",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": "src/Scraps/Facade/",
+            "Scraps\\": "src/Scraps/",
+            "Support\\": "src/Scraps/Support/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gedeontimothy",
+            "email": "gedeonbateko3@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.3"
+    },
+}

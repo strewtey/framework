@@ -1,0 +1,3 @@
+// (function($) {
+//	// $('.@class').more ...
+// })(jQuery);
