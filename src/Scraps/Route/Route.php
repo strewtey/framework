@@ -42,8 +42,10 @@ class Route extends Factory{
 		return new $class($this, ...$args);
 	}
 	protected function getFactorySpace(){return 'Scraps\Route\Factories\\';}
+	public static function accept_encoding($encoding = 'gzip') : bool { return isset($_SERVER) && array_key_exists('HTTP_ACCEPT_ENCODING', $_SERVER) ? (bool) preg_match('/' . $encoding . '/', $_SERVER['HTTP_ACCEPT_ENCODING']) : false; }
 	public function run(){
 		header('HTTP/1.0 404 PAGE NOT FOUND !');
+		if(Route::accept_encoding() === true) ob_start('ob_gzhandler');
 		$res = false;
 		if(isset($this->request[strtoupper($_SERVER['REQUEST_METHOD'])])){
 			foreach ($this->request[strtoupper($_SERVER['REQUEST_METHOD'])] as $key => $route) {
@@ -56,6 +58,7 @@ class Route extends Factory{
 			}
 		}
 		Error::init();
+		if(Route::accept_encoding() === true) ob_end_flush();
 	}
 	public function named($name, $datas = [], $get = true){
 		$gt = '';
