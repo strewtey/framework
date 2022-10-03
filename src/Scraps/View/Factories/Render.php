@@ -1,5 +1,5 @@
 <?php 
-namespace Core\View\Factories;
+namespace Scraps\View\Factories;
 
 /**
  * 
@@ -11,7 +11,7 @@ class Render{
 	protected $view;
 	protected static $render;
 	
-	public function __construct(\Core\View\View|null $view = null, string|null $path = null, array|object|null $datas = [], array|string|null $layout = null){
+	public function __construct(\Scraps\View\View|null $view = null, string|null $path = null, array|object|null $datas = [], array|string|null $layout = null){
 		if(!is_null($view)){
 			$this->datas = $datas;
 			$this->view = $view;
@@ -65,7 +65,7 @@ class Render{
 		if(!file_exists($path))
 			die('This file not exits : "' . $path . '".');
 		else{
-			if(!function_exists('core\view\factories\rend273872632562')){
+			if(!function_exists('scraps\view\factories\rend273872632562')){
 				function rend273872632562($datas019287321, $loc297329521, $layout_____8y282g84g2 = null) : string {
 					ob_start();
 					extract($datas019287321);

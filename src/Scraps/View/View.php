@@ -1,8 +1,8 @@
 <?php 
-namespace Core\View;
-use Core\Factory\Factory;
+namespace Scraps\View;
+use Scraps\Factory\Factory;
 use Support\Dir;
-use Core\Helper\Helper;
+use Scraps\Helper\Helper;
 /**
  * 
  */
@@ -17,7 +17,7 @@ class View extends Factory{
 		if(!file_exists($this->ressourcesViewPath))
 			die('This path not exits : "' . $this->getRessourcesViewPath() . '". Create it !');
 	}
-	protected function getFactorySpace(){return 'Core\View\Factories\\';}
+	protected function getFactorySpace(){return 'Scraps\View\Factories\\';}
 	public function getRessourcesViewPath(){
 		return $this->ressourcesViewPath;
 	}
