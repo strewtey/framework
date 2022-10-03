@@ -7,7 +7,10 @@
             "": "src/Scraps/Facade/",
             "Scraps\\": "src/Scraps/",
             "Support\\": "src/Scraps/Support/"
-        }
+        },
+        "files": [
+            "src/Scraps/Helper/helpers.php"
+        ]
     },
     "authors": [
         {
