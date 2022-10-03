@@ -31,6 +31,9 @@ class Error {
 			call_user_func(Route::$fallback);
 		else
 			if(isset(Route::$error[404])) call_user_func(Route::$error[404]);
-			else view('error.404');
+			else view('layouts.web.errorcode', ['datas' => [
+				'code' => '404',
+				'message' => "Not found"
+			]]);
 	}
 }
